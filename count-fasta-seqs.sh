@@ -94,3 +94,11 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+#!/bin/bash
+
+for FILE in "$@"
+do
+
+count=$(grep ">" "FILE" | wc -l)
+
+done
