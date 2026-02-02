@@ -100,5 +100,6 @@ for FILE in "$@"
 do
 
 count=$(grep ">" "FILE" | wc -l)
+total=$(expr $count + $total)
 
 done
