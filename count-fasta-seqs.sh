@@ -96,10 +96,15 @@ echo "$@"
 
 #!/bin/bash
 
-for FILE in "$@"
+total=0
+for file_path in "$@"
 do
-
-count=$(grep ">" "FILE" | wc -l)
-total=$(expr $count + $total)
-
+    count=$(grep ">" "file_path" | wc -l)
+    total=$(expr $count + $total)
+    file_name=$(basename $file_path)
+    echo $count $file_name
 done
+echo $total
+
+# comments may have gotten messed up in a recent commit but liz added jamie's class example above,
+# see if it works for you!
